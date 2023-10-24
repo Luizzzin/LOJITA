@@ -57,7 +57,7 @@ main .container {
     display: flex;
     border-radius: 10px;
     margin: 35px 50px;
-    box-shadow: 0 0 15px 1px #000003;
+    box-shadow: 0 0 10px 0px #000000;
     transition: 0.3s;
 }
 
@@ -82,4 +82,27 @@ span {
 }
 button{
     cursor: pointer;
+}
+
+#botao{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 185, 159);
+    transition: 0.2s ease;
+}
+#botao:hover{
+    background-color: rgb(255, 194, 79);
+}
+
+#buscar-input{
+    width: 500px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+#busque{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
 }

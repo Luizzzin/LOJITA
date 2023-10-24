@@ -56,7 +56,11 @@ function removeCarrinho(itemNome, itemPreco) {
     }
 }
 function updateCarrinho() {
-    
+    let cont = 0;
+    for(let item in itensCarrinho){
+       cont += itensCarrinho[item].quantity 
+    }
+    document.getElementById("cont-carrinho").innerHTML = cont
 }
 
 function limparCarrinho() {
@@ -74,5 +78,19 @@ function toggleCarrinho(){
         itensCarrinhoDiv.style.display = "block"
     } else {
         itensCarrinhoDiv.style.display = "none"
+    }
+}
+
+function buscarProdutos(){
+    const buscarInput = document.getElementById("buscar-input")
+    const produto = document.getElementsByClassName("produto")
+    for(let i = 0; i < produto.length; i++){
+        const produtoNome = produto[i].querySelector("h3").innerText.toLowerCase();
+
+        if(produtoNome.includes(buscarInput.value.toLowerCase())){
+            produto[i].style.display = "block"
+        } else {
+            produto[i].style.display = "none"
+        }
     }
 }
